@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>look & feel</title>
+    <link rel="stylesheet" href="../../bundle.css">
+    <script src="/pagefind/pagefind-ui.js"></script>
+</head>
+<body>
+    <ul class="breadcrumbs"><li><a href="../../../index.html">root</a></li>
+    <li><a href="../system-index.html">system - bs5</a></li>
+        <li>look & feel</li>
+    </ul>
+    <p class="label">header & footer:</p>
+    <ul class="index">
+        <li><a href="./footer_html.html">footer</a></li>
+        <li><a href="./header_html.html">header</a></li>
+    </ul>
+    <p class="label">custom js/css:</p>
+    <ul class="index">
+        <li><a href="./a-z_css.html">a-z.css</a></li>
+        <li><a href="./footer_css.html">footer.css</a></li>
+        <li><a href="./header_css.html">header.css</a></li>
+        <li><a href="./system_css.html">system.css</a></li>
+    </ul>
+    <p class="label">page layout:</p>
+    <br>
+    <div id="search"></div>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true, highlightParam: "highlight" });
+        });
+    </script>
+</body>
+</html>

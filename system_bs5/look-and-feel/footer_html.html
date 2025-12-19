@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer.html</title>
+    <link rel="stylesheet" href="../../bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/gruvbox-dark-hard.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+</head>
+<body>
+   <ul class="breadcrumbs"><li><a href="../../../index.html">root</a></li>
+    <li><a href="../../index.html">system - bs5</a></li>
+      <li><a href="./look-and-feel-index.html">look & feel</a></li>
+      <li>footer.html</li>
+   </ul>
+<pre contenteditable="true">
+<code data-pagefind-body class="language-html">
+<footer class="mt-5 py-5">
+    <div class="container-md py-4">
+        <div class="row">
+            <div class="col-md-3">
+                <h4>Library Contact</h4>
+                <ul>
+                    <li><i class="fa fa-envelope fa-fw me-2"></i><a
+                            href="mailto:library@ecu.edu.au">library@ecu.edu.au</a></li>
+                    <li><i class="fa fa-phone fa-fw me-2"></i>(61) 8 6304 5525</li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h4>Library Links</h4>
+                <ul>
+                    <li><a href="https://ecu.on.worldcat.org/discovery">Search</a></li>
+                    <li><a
+                            href="https://www.ecu.edu.au/centres/library-services/how-to-guides/borrowing-items">Borrow</a>
+                    </li>
+                    <li><a href="https://ecu.au.libguides.com/az.php">Databases</a></li>
+                    <li><a
+                            href="https://www.ecu.edu.au/centres/library-services/services-and-facilities/library-workshops">Workshops</a>
+                    </li>
+                    <li><a href="https://www.ecu.edu.au/centres/library-services/room-bookings">Room Bookings</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="https://courses.ecu.edu.au/">Canvas</a></li>
+                    <li><a href="https://www.ecu.edu.au/my-uni-start/overview">My Uni Start</a></li>
+                    <li><a href="https://askus2.ecu.edu.au/s/">Ask Us @ ECU</a></li>
+                    <li><a href="https://www.linkedin.com/learning">LinkedIn Learning</a></li>
+                    <li><a href="https://intranet.ecu.edu.au/student/my-studies/academic-integrity">Academic
+                            Integrity</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h4>More about ECU</h4>
+                <ul>
+                    <li><a href="https://studyonline.ecu.edu.au/blog/">Blog</a></li>
+                    <li><a href="https://studyonline.ecu.edu.au/online-courses">Online Courses</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div style="border-top: 1px solid #26b298;">
+            <p style="margin-top:16px; text-align: center; font-size: 12px; color: white;"><i>Edith Cowan University
+                    acknowledges
+                    and respects the
+                    Noongar people, who are the traditional
+                    custodians of the land upon which its campuses stand and its programs operate.
+                    In particular ECU pays its respects to the Elders, past and present, of the Noongar people, and
+                    embrace their culture, wisdom and knowledge.</i></p>
+        </div>
+
+    </div>
+</footer>
+</code>
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<button class="editor-button" onclick="window.open('https://codepen.io/pen/?editors=1100', '_blank');" type="button">Editor</button>
+</pre>
+<script>hljs.highlightAll();</script>
+<script>
+   function copyCode(button) {
+   const codeElement = button.previousElementSibling;
+   const text = codeElement.textContent;
+   
+   navigator.clipboard.writeText(text).then(() => {
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+         button.textContent = 'Copy';
+         button.classList.remove('copied');
+      }, 2000);
+   }).catch(err => {
+      console.error('Failed to copy: ', err);
+   });
+   }
+</script>
+</body>
+</html>
