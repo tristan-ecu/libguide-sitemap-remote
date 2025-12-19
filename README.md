@@ -1,6 +1,6 @@
 # libguide sitemap
 
-system (bs5) as of: 12/01/25
+system (bs5) as of: 19/12/25
 
 ```
 LIBGUIDE-SITEMAP
