@@ -1,11 +1,10 @@
 # libguide sitemap
 
-system (bs5) as of: 19/12/25
+system (bs5) as of: 13/01/25
 
 ```
 LIBGUIDE-SITEMAP
  ┗ system_bs5
-    ┣ groups
     ┣ look-and-feel
     ┃  ┣ a-z_css.html
     ┃  ┣ footer_css.html
