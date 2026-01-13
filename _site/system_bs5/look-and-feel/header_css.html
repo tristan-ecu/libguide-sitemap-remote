@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header.css</title>
+    <link rel="stylesheet" href="../../bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/gruvbox-dark-hard.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+</head>
+<body>
+   <ul class="breadcrumbs"><li><a href="../../../index.html">root</a></li>
+    <li><a href="../../index.html">system - bs5</a></li>
+      <li><a href="./look-and-feel-index.html">look & feel</a></li>
+      <li><a href="https://d329ms1y997xa5.cloudfront.net/sites/5432/include/header.css">header.css</a></li>
+   </ul>
+<pre contenteditable="true">
+<code data-pagefind-body class="language-css">
+/**********************/
+/******* header *******/
+/**********************/
+
+.header-nav {
+    background-color: var(--color-black);
+
+    /*********************/
+    /***** nav links *****/
+    /*********************/
+
+    & .nav-link {
+        padding-left: 0.75rem;
+        border-radius: var(--border-radius-inner);
+        color: var(--color-white);
+
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            outline: none !important;
+            display: block;
+            background-color: var(--color-white);
+            color: var(--color-black);
+        }
+    }
+
+    /*********************/
+    /***** dropdowns *****/
+    /*********************/
+
+    & .dropdown-menu {
+        margin-top: 0.75px;
+        box-shadow: var(--box-shadow-outer);
+        border: none;
+    }
+
+    /**********************/
+    /*** dropdown items ***/
+    /**********************/
+
+    & .dropdown-item {
+        padding-left: 0.75rem;
+        border-radius: var(--border-radius-inner);
+
+        &:focus-visible {
+            outline: none !important;
+        }
+
+        &:active {
+            background-color: var(--dropdown-highlight);
+            color: var(--color-black);
+        }
+    }
+
+    & a.dropdown-item {
+        color: var(--color-black)
+    }
+
+    /***************************/
+    /***** navbar togglers *****/
+    /***************************/
+
+    & .navbar-toggler {
+        background-color: var(--color-white);
+
+        &:hover {
+            background-color: var(--dropdown-highlight);
+        }
+
+        &:focus-visible {
+            outline: none !important;
+            border-color: var(--dropdown-highlight) !important;
+            background-color: var(--dropdown-highlight);
+        }
+    }
+
+    /*****************/
+    /***** brand *****/
+    /*****************/
+
+    & .navbar-brand {
+        padding-bottom: 0.5rem;
+    }
+
+    & .navbar-brand-logo {
+        width: 95px;
+    }
+
+    & .navbar-brand-title {
+        display: inline-block;
+        margin-left: 1.5rem;
+        vertical-align: middle;
+        text-align: center;
+
+        & * {
+            margin-bottom: 0;
+            color: var(--color-white);
+            text-decoration: none;
+        }
+
+        & a {
+
+            &>h2 {
+                font-size: 1.65rem !important;
+            }
+
+            &:hover,
+            &:focus,
+            &:focus-visible {
+                outline: none !important;
+                display: inline;
+                text-decoration: underline 2px var(--color-white);
+            }
+        }
+    }
+}
+</code>
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<button class="editor-button" onclick="window.open('https://codepen.io/pen/?editors=1100', '_blank');" type="button">Editor</button>
+</pre>
+<script>hljs.highlightAll();</script>
+<script>
+   function copyCode(button) {
+   const codeElement = button.previousElementSibling;
+   const text = codeElement.textContent;
+   
+   navigator.clipboard.writeText(text).then(() => {
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+         button.textContent = 'Copy';
+         button.classList.remove('copied');
+      }, 2000);
+   }).catch(err => {
+      console.error('Failed to copy: ', err);
+   });
+   }
+</script>
+</body>
+</html>

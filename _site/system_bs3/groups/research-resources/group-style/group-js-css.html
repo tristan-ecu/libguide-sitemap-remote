@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS/CSS</title>
+    <link rel="stylesheet" href="../../../../bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/gruvbox-dark-hard.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+</head>
+<body>
+    <ul class="breadcrumbs"><li><a href="../../../../../index.html">root</a></li>
+    <li><a href="../../../system-index.html">system - bs3</a></li>
+        <li><a href="../../groups-index.html">groups</a></li>
+        <li><a href="../group-index.html">Research Resources</a></li>
+        <li><a href="./group-style-index.html">group style</a></li>
+        <li>group JS/CSS</li>
+    </ul>
+   <ul>
+      <li class="note"> applied in the &lt;head&gt;</li>
+   </ul>
+<pre>
+<code class="language-html">
+&lt;script&gt; 
+   $(document).ready(function() { 
+   
+   // BACKGROUND IMAGE TO BE USED
+   var imageUrl =  &quot;https://libapps-au.s3-ap-southeast-2.amazonaws.com/customers/3259/images/home.jpg&quot;; 
+   
+   $(&quot;.header-background&quot;).css(&quot;background-image&quot;, &quot;linear-gradient(90deg, rgba(60, 60, 60, 0.65) 0%, rgba(60, 60, 60, 0.65) 100%),url(&quot; + imageUrl + &quot;)&quot;); 
+   
+   }); 
+&lt;/script&gt;
+</code>
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<button class="editor-button" onclick="window.open('https://codepen.io/pen/?editors=1100', '_blank');" type="button">Editor</button>
+</pre>
+<script>hljs.highlightAll();</script>
+<script>
+   function copyCode(button) {
+   const codeElement = button.previousElementSibling;
+   const text = codeElement.textContent;
+   
+   navigator.clipboard.writeText(text).then(() => {
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+         button.textContent = 'Copy';
+         button.classList.remove('copied');
+      }, 2000);
+   }).catch(err => {
+      console.error('Failed to copy: ', err);
+   });
+   }
+</script>
+</body>
+</html>
