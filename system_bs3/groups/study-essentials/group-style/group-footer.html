@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>group footer</title>
+    <link rel="stylesheet" href="../../../../bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/gruvbox-dark-hard.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+</head>
+<body>
+    <ul class="breadcrumbs"><li><a href="../../../../../libguide-sitemap-remote/">root</a></li>
+    <li><a href="../../../system-index.html">system (bs3)</a></li>
+        <li><a href="../../groups-index.html">groups</a></li>
+        <li><a href="../group-index.html">Study Essentials</a></li>
+        <li><a href="./group-style-index.html">group style</a></li>
+        <li>group footer</li>
+    </ul>
+<pre>
+<code class="language-html">
+&lt;div class=&quot;container&quot;&gt;
+   &lt;div class=&quot;col-md-3&quot;&gt;
+      &lt;h3&gt;Library Contact&lt;/h3&gt;
+      &lt;ul&gt;
+         &lt;li&gt;&lt;a href=&quot;mailto:library@ecu.edu.au&quot;&gt;library@ecu.edu.au&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;(61) 8 6304 5525&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;col-md-3&quot;&gt;
+      &lt;h3&gt;Library Links&lt;/h3&gt;
+      &lt;ul&gt;
+         &lt;li&gt;&lt;a href=&quot;https://www.ecu.edu.au/centres/library-services/services-and-facilities/library-workshops&quot;&gt;Library Workshops&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;https://ecu.on.worldcat.org/discovery&quot;&gt;ECU Library Search&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;https://www.ecu.edu.au/centres/library-services/how-to-guides/borrowing-items&quot;&gt;Borrowing Items&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;https://www.ecu.edu.au/centres/library-services/room-bookings&quot;&gt;Room bookings&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/az.php&quot;&gt;Databases&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;col-md-3&quot;&gt;
+      &lt;h3&gt;Quick Links&lt;/h3&gt;
+      &lt;ul&gt;
+         &lt;li&gt;&lt;a href=&quot;https://intranet.ecu.edu.au/student/my-studies/academic-integrity&quot;&gt;Academic Integrity&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;https://askus2.ecu.edu.au/s/&quot;&gt;Ask us @ ECU&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;https://courses.ecu.edu.au/&quot;&gt;Canvas&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/learning&quot;&gt;LinkedIn Learning&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;https://www.ecu.edu.au/my-uni-start/overview&quot;&gt;Student Guide - My Uni Start&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;col-md-3&quot;&gt;
+      &lt;h3&gt;More about ECU&lt;/h3&gt;
+      &lt;ul&gt;
+         &lt;li&gt;&lt;a href=&quot;https://studyonline.ecu.edu.au/blog/&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;https://studyonline.ecu.edu.au/online-courses&quot;&gt;All online courses&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<button class="editor-button" onclick="window.open('https://codepen.io/pen/?editors=1100', '_blank');" type="button">Editor</button>
+</pre>
+<script>hljs.highlightAll();</script>
+<script>
+   function copyCode(button) {
+   const codeElement = button.previousElementSibling;
+   const text = codeElement.textContent;
+   
+   navigator.clipboard.writeText(text).then(() => {
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+         button.textContent = 'Copy';
+         button.classList.remove('copied');
+      }, 2000);
+   }).catch(err => {
+      console.error('Failed to copy: ', err);
+   });
+   }
+</script>
+</body>
+</html>

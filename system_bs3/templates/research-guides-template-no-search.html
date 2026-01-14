@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Guides Template no search</title>
+    <link rel="stylesheet" href="../../bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/gruvbox-dark-hard.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+</head>
+<body>
+   <ul class="breadcrumbs"><li><a href="../../../libguide-sitemap-remote/">root</a></li>
+    <li><a href="../system-index.html">system (bs3)</a></li>
+      <li><a href="./templates-index.html">templates</a></li>
+      <li>Research - Guides Template no search</li>
+   </ul>
+<pre>
+<code class="language-html">
+&lt;style&gt;
+   /* BUTTONS - START */
+   .buttons--container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   }
+   .button--link {
+   width: 30%;
+   min-width: 250px;
+   height: 50px;
+   color: white;
+   background-color: #3c3c3c;
+   text-decoration: none !important;
+   outline: none;
+   padding: 15px;
+   margin-top: 15px;
+   text-align: center;
+   transition: 0.2s;
+   font-size: 14px;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   }
+   .button--link:hover, .button--link:focus {
+   background-color: #ca450c;
+   color: white;
+   outline: none;
+   }
+   #s-lg-tabs-container .button--link {
+   display: block;
+   width: auto;
+   min-width: 100%;
+   height: auto;
+   }
+   @media (max-width: 1000px) {
+   .button--link{
+   display: block;
+   width: 100%;
+   margin-left: 20px;
+   margin-right: 20px;
+   }
+   }
+   /* BUTTONS - END*/
+   #s-lg-side-nav-content a, #s-lg-side-nav-content a:focus, #s-lg-side-nav-content a:hover {
+   text-decoration: underline;
+   }
+   table {
+   max-width: 100%;
+   }
+   .page-subtitle {
+   font-size: 22px;
+   margin-top: 10px;
+   display: block;
+   }
+   @media (max-width:992px) {
+   .lower-navigation li {
+   padding-left: 0px !important;
+   }
+   }
+   .bottom-div2 h2{
+   font-size: 22px;
+   }
+   @media (min-width:992px) {
+   .bottom-div2 h2{
+   margin-top: 0px;
+   }
+   }
+   a, a:focus, a:hover {
+   color: #ca450c;
+   outline: none;
+   text-decoration: none;
+   }
+   a:focus, a:hover {
+   text-decoration: underline;
+   }
+   #s-lg-guide-header-search {
+   display: none;
+   }
+   #s-lg-guide-search-form {
+   margin-bottom: 10px;
+   }
+   #s-lg-guide-search-terms {
+   height: 40px;
+   text-align: center;
+   font-size: 16px;
+   flex-grow: 1;
+   width: 100%;
+   border-top-left-radius: 20px;
+   border-bottom-left-radius: 20px;
+   }
+   #s-lg-guide-search-form .btn {
+   background-color: #337ab7;
+   border: none;
+   color: white;
+   height: 40px;
+   width: 100px;
+   font-size: 18px;
+   outline: none;
+   border-top-right-radius: 20px;
+   border-bottom-right-radius: 20px;
+   }
+   #s-lg-side-nav-content {
+   position: relative;
+   top: 150px;
+   }
+   /* fix line not breaking the line */
+   #s-lg-side-nav-content .col-md-9 blockquote {
+   word-break: break-word;
+   }
+   /* mobile tables */
+   table {
+   display: block;
+   overflow-x: auto;
+   }
+   #s-lib-bc {
+   display: none;
+   }
+   li &gt; ul {
+   list-style: disc;
+   }
+   #s-lg-guide-tabs{
+   }
+   .dropdown-menu{
+   padding: 0px;
+   }
+   /* SIDEBAR SCROLL */
+   #sidebar-wrapper::-webkit-scrollbar-track
+   {
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   background-color: #F5F5F5;
+   }
+   #sidebar-wrapper::-webkit-scrollbar
+   {
+   width: 10px;
+   background-color: #F5F5F5;
+   }
+   #sidebar-wrapper::-webkit-scrollbar-thumb
+   {
+   background-color: #307cbd;	
+   background-image: -webkit-linear-gradient(45deg,
+   rgba(255, 255, 255, .2) 25%,
+   transparent 25%,
+   transparent 50%,
+   rgba(255, 255, 255, .2) 50%,
+   rgba(255, 255, 255, .2) 75%,
+   transparent 75%,
+   transparent)
+   }
+   /* END SIDEBAR SCROLL */
+   /* Move left column to the right */
+   @media (min-width:767px) {
+   .s-lg-tabs-side.pad-bottom-med {
+   float: right;
+   }
+   .row.ecu-footer {
+   margin-left: -5px;
+   }
+   }
+   .s-lg-guide-body{
+   position: relative;
+   padding-left: 250px;
+   transition: all 0.4s ease 0s;
+   }
+   @media (max-width:767px) { 
+   #sidebar-wrapper {
+   opacity: 1 !important; 
+   }
+   }
+   #sidebar-wrapper {
+   margin-left: -245px;
+   top: 128px;
+   left: 245px;
+   width: 245px;
+   background: #17355a;
+   opacity: 0.85;
+   position: fixed;
+   height: calc(100% - 128px);
+   overflow-y: auto;
+   overflow-x: hidden;
+   z-index: 1000;
+   transition: all 0.4s ease 0s;
+   }
+   #sidebar-wrapper &gt; nav &gt; .sidebar-nav &gt; li.dropdown &gt; a:nth-child(1) {
+   padding-right: 40px !important;
+   }
+   #sidebar-wrapper &gt; nav &gt; .sidebar-nav &gt; li.dropdown &gt; a:nth-child(2) {
+   position: absolute;
+   right: 10px;
+   }
+   #sidebar-wrapper &gt; nav &gt; .sidebar-nav &gt; li.dropdown &gt; a:nth-child(1) {
+   width: 100%;
+   z-index: 100;
+   }
+   #sidebar-wrapper .dropdown-menu {
+   position: static;
+   background: transparent;
+   }
+   #sidebar-wrapper .nav .s-lg-tab-drop {
+   display: block !important;
+   }
+   #sidebar-wrapper .s-lg-tab-top-link{
+   float:left;
+   }
+   #sidebar-wrapper .dropdown-menu{
+   width: 100%;
+   }
+   #sidebar-wrapper .s-lg-subtab-ul {
+   background: rgba(0, 0, 0, 0.45);
+   }
+   .sidebar-open{
+   left: 235px !important;
+   }
+   #sidebar-wrapper .nav.nav-pills.nav-stacked{
+   display: block;
+   }
+   #sidebar-wrapper .s-lg-subtab-ul.dropdown-menu &gt; li &gt; a{
+   white-space: normal;
+   }
+   #sidebar-wrapper .fa-external-link{
+   margin-left: 5px;
+   color: white;
+   }
+   .s-lg-guide-body.active {
+   padding-left: 0;
+   }
+   .s-lg-guide-body.active #sidebar-wrapper {
+   left: 0;
+   }
+   #page-content-wrapper {
+   width: 100%;
+   padding-top: 70px;
+   transition: all 0.4s ease 0s;
+   }
+   .sidebar-nav {
+   position: absolute;
+   top: 0;
+   width: 245px;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   padding-bottom: 50px;
+   }
+   .sidebar-nav li a {
+   color: white;
+   text-decoration: none;
+   padding-left: 50px;
+   min-height: 60px;
+   display: flex;
+   align-items: center;
+   }
+   .sidebar-nav li a:focus{
+   background: rgba(255,255,255,0.2) !important;
+   outline: none;
+   }
+   .sidebar-nav li a span:before {
+   position: absolute;
+   left: 0;
+   color: white;
+   text-align: center;
+   width: 20px;
+   line-height: 18px;
+   }
+   .sidebar-nav li a span {
+   max-width: 150px;
+   }
+   .sidebar-nav li a:hover,
+   .sidebar-nav li.active {
+   color: #fff;
+   background: rgba(255,255,255,0.2);
+   text-decoration: none;
+   }
+   .sidebar-nav li a:active,
+   .sidebar-nav li a:focus {
+   text-decoration: none;
+   }
+   .sidebar-nav &gt; .sidebar-brand {
+   height: 65px;
+   line-height: 60px;
+   font-size: 18px;
+   }
+   .sidebar-nav &gt; .sidebar-brand a {
+   color: white;
+   }
+   .sidebar-nav &gt; .sidebar-brand a:hover {
+   color: #fff;
+   background: none;
+   }
+   .sidebar-nav .list-group-item{
+   background-color: transparent;
+   border: 0px;
+   padding: 0px;
+   }
+   .sidebar-nav .list-group-item a{
+   padding-left: 65px;
+   }
+   .sidebar-icon {
+   width: 20px;
+   height: 20px;
+   left: 11px;
+   top: 50%;
+   transform: translateY(-50%);
+   position: absolute;
+   }
+   @media (max-width:767px) {
+   .s-lg-guide-body{
+   padding-left: 15px;
+   }
+   #sidebar-wrapper {
+   left: 0;
+   }
+   .s-lg-guide-body.active {
+   position: relative;
+   left: 250px;
+   }
+   .s-lg-guide-body.active #sidebar-wrapper {
+   left: 250px;
+   width: 250px;
+   transition: all 0.4s ease 0s;
+   }
+   #menu-toggle {
+   display: inline-block;
+   }
+   }
+   body{
+   background-color: #f3f1ed;
+   /* letter-spacing: 0.75px; */
+   }
+   /* STYLE TABS */
+   .nav-tabs&gt;li.active&gt;a, .nav-tabs&gt;li.active&gt;a:focus, .nav-tabs&gt;li.active&gt;a:hover {
+   background-color: #2677bb !important;
+   color: white !important;
+   margin-right: 0px;
+   border: 0px;
+   border-radius: 0px;
+   }
+   .s-lib-jqtabs .nav-tabs&gt;li {
+   margin-bottom: -1px;
+   }
+   .s-lib-jqtabs .nav-tabs li.active a {
+   background: RGB(49, 110, 185) !important;
+   color: white !important;
+   }
+   .s-lib-jqtabs .nav-tabs {
+   position: relative;
+   column-count: 2;
+   -webkit-columns: 2;
+   -moz-columns: 2;
+   border-bottom: 0px;
+   margin-bottom: 15px;
+   }
+   @media only screen and (max-width: 768px) {
+   .s-lib-jqtabs .nav-tabs {
+   column-count: 1;
+   -webkit-columns: 1;
+   -moz-columns: 1;
+   }
+   .s-lib-jqtabs .nav-tabs li {
+   display: inline-block;
+   width: 100%;
+   }
+   }
+   .s-lib-jqtabs .nav-tabs li {
+   float: none;
+   position: static;
+   page-break-inside: avoid;
+   border: 1px solid #d3d3d3 !important;
+   break-inside: avoid;
+   page-break-inside: avoid;
+   -webkit-column-break-inside: avoid;
+   white-space: normal;
+   margin-bottom: 5px;
+   }
+   .ui-state-hover{
+   border: 1px solid #d3d3d3 !important;
+   }
+   .s-lib-jqtabs .nav-tabs li a{
+   float: none;
+   position: relative;
+   display: flex;
+   align-items: center;
+   height: 60px;
+   font-size: 15px;
+   font-weight: bold;
+   background: white;
+   color: #337ab7;
+   padding-left: 50px;
+   /*border-radius: 15px;*/
+   outline: none;
+   word-break: break-word !important;
+   margin-right: 0px;
+   border: 0px;
+   border-radius: 0px;
+   }
+   .s-lib-jqtabs .nav-tabs li a span.fa{
+   font-size: 25px !important;
+   }
+   /*.s-lib-jqtabs .nav-tabs li a:before{
+   top: 2px;
+   left: 2px;
+   display: inline-block;
+   position: absolute;
+   float: left;
+   background-image: url(&#39;https://libapps-au.s3-ap-southeast-2.amazonaws.com/customers/3259/images/file.png&#39;);
+   background-size: 30px 30px;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 30px; 
+   height: 30px;
+   content:&quot;&quot;;
+   }*/
+   .s-lib-jqtabs .nav-tabs li[aria-selected=true] a{
+   color: white;
+   background-color: #316eb9 !important;
+   }
+   ul.ui-tabs-nav.ui-corner-all.ui-helper-reset.ui-helper-clearfix.ui-widget-header:after{
+   content: &quot;&quot;;
+   display: block;
+   position: absolute;
+   bottom: -15px;
+   left: 0px;
+   width: 100%;
+   height: 1px;
+   background-color: #d8d8d8;
+   }
+   .tab-content {
+   border: 1px solid #ddd;
+   }
+   /* remove border from main content tabs */
+   #s-lg-guide-main .ui-widget-content { 
+   border: 0px;
+   }
+   #menu-toggle {
+   display: none;
+   position: absolute;
+   top: 60px;
+   text-decoration: none;
+   float: left;
+   color: #fff;
+   padding-right: 15px;
+   outline: none;
+   }
+   #s-lg-guide-tabs .nav-stacked&gt;li {
+   background-color: #3e3e3e;
+   transition: 0.5s;
+   background-size: 200% auto;
+   border-radius: 15px;
+   }
+   #s-lg-guide-tabs .nav-stacked&gt;li:hover{
+   background-position: right center;
+   }
+   #s-lg-tabs-container .nav-pills &gt; li &gt; a {
+   background: transparent;
+   color: white;
+   margin-left: 30px;
+   outline: none;
+   }
+   #s-lg-tabs-container .nav-pills &gt; .active &gt; a{
+   background: transparent;
+   color: white;
+   margin-left: 30px;
+   }
+   #s-lg-tabs-container .nav-pills &gt; .active &gt; a:hover, #s-lg-tabs-container .nav-pills &gt; li &gt; a:hover{
+   background: transparent;
+   color: white
+   }
+   /*.nav-stacked&gt;li:after{
+   display: block;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 40px;
+   height: 100%;
+   border-top-left-radius: 15px;
+   border-bottom-left-radius: 15px;
+   background-color: white;
+   content: &quot; &quot;;
+   z-index: 100;
+   }*/
+   /*.nav-stacked&gt;li:before{
+   margin-top: 5px;
+   margin-left: 10px;
+   display: inline-block;
+   position: relative;
+   float: left;
+   background-image: url(&#39;https://libapps-au.s3-ap-southeast-2.amazonaws.com/customers/3259/images/file.png&#39;);
+   background-size: 25px 25px;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 25px; 
+   height: 25px;
+   content:&quot;&quot;;
+   }*/
+   .search-box{
+   display: flex; 
+   margin: 0px 40px 0px 50%; 
+   flex-grow: 1;
+   font-size: 20px;
+   }
+   @media only screen and (max-width: 768px) {
+   .search-box{
+   margin: 0px 40px 0px 0px; 
+   }
+   }
+   .search-box span{
+   transition: transform .3s; /* Animation */
+   font-size: 22px;
+   top: 5px;
+   }
+   .search-box:hover span{
+   transform: scale(1.3);
+   }
+   .search-box input{
+   width: 100%;
+   text-align:center;
+   border-top-left-radius: 15px;
+   border-bottom-left-radius: 15px;
+   outline: none;
+   border: 0px;
+   }
+   .search-box button{
+   background-color: #3370c5;
+   color: white;
+   border: 0px;
+   outline: none;
+   width: 50px;
+   border-top-right-radius: 15px;
+   border-bottom-right-radius: 15px;
+   }
+&lt;/style&gt;
+&lt;style&gt;
+   /* Beadcrumbs style */
+   #s-lib-bc li a, #s-lib-bc .breadcrumb&gt;.active {
+   color: white;
+   }
+   /* Fix anchor links because of fixed header */
+   a[name]:not([href]){
+   display: block;    
+   position: relative;     
+   top: -140px;
+   visibility: hidden;
+   }
+   /* Previous and Next Buttons */
+   .previous a, .next a{
+   color: #404040;
+   }
+   #s-lg-guide-header {
+   height: 450px;
+   padding-top: 135px;
+   margin-left: -15px;
+   margin-right: -15px;
+   text-align: center;
+   color: white;
+   /*background-image: linear-gradient(90deg, rgba(60, 60, 60, 0.65) 0%, rgba(60, 60, 60, 0.65) 100%), url(https://libapps-au.s3-ap-southeast-2.amazonaws.com/customers/3259/images/modern-office-building-facade-VCWMX8P.jpg);
+   background-size: cover;
+   background-position: center;*/
+   }
+   #s-lg-guide-header-info{
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   width: 90%;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+   padding: 0px 20px 0px 20px;
+   text-align: center;
+   }
+   #s-lg-guide-header-info h1{
+   font-size: 36px !important;
+   color: white;
+   max-width: 555px;
+   }
+   /* START: Table Style
+   table th {
+   color: white;
+   background: #fe6a00;
+   font-size: 15px;
+   border: 0px !important;
+   }
+   END: Table Style */
+   .top-banner {
+   height: 140px;
+   /* background-image: linear-gradient(90deg, rgba(60, 60, 60, 0.55) 0%, rgba(60, 60, 60, 0.55) 100%), url(&#39;https://libapps-au.s3-ap-southeast-2.amazonaws.com/customers/3259/images/research-guide-banner.jpg&#39;); */
+   background-color: #0a111b;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   /* background-attachment: fixed; */
+   margin-left: -5px;
+   margin-right: -15px;
+   position: relative;
+   top: 130px;
+   overflow:hidden;
+   }
+   @media only screen and (max-width: 768px) {
+   #light-bulb {
+   display: none;
+   }
+   }
+   @media only screen and (max-width: 768px) {
+   .top-banner {
+   margin-left: -15px;
+   }
+   #s-lg-guide-header-info {
+   width: 100%;
+   }
+   }
+   #s-lg-guide-main{
+   position: relative;
+   border-radius: 15px;
+   background: #FFF;
+   padding: 25px 15px 0px;
+   font-size: 14px;
+   }
+   /* Remove bullet points 
+   #s-lg-guide-main ul {
+   list-style-type: none !important;
+   } */
+   /* HEADER - START */
+   .navbar-default .navbar-nav&gt;.open&gt;a, .navbar-default .navbar-nav&gt;.open&gt;a:focus, .navbar-default .navbar-nav&gt;.open&gt;a:hover, .navbar-default .navbar-nav&gt;.active&gt;a, .navbar-default .navbar-nav&gt;.open&gt;a:hover, .navbar-default .navbar-nav&gt;.active&gt;a:visited {
+   color: #dedede;
+   background-color: #424242b3;
+   }
+   .navbar-default .navbar-nav&gt;li&gt;a:visited {
+   color: #FFF;
+   }
+   .nav a {
+   font-weight: normal;
+   }
+   .nav .s-lg-tab-top-link, .nav .s-lg-tab-drop{
+   display: inline-block !important;
+   }
+   .custom-topbar{
+   max-width: 1200px;
+   }
+   .navbar-default .navbar-nav&gt;li&gt;a {
+   color: #FFF;
+   }
+   .navbar-nav&gt;li&gt;a:hover{
+   color: #d8d8d8 !important;
+   }
+   .ecu-logo{
+   width: 120px;
+   border: 1px #FFF solid;
+   }
+   .navbar-brand{
+   height: auto;
+   }
+   .navbar{
+   min-height: 130px;
+   border-bottom: solid #000 2px;
+   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+   background: rgb(33,33,33);
+   background: linear-gradient(90deg, rgba(33,33,33,1) 0%, rgba(33,33,33,0.8855917366946778) 50%, rgba(33,33,33,0.804359243697479) 100%);
+   }
+   .nav-separator{
+   height: 130px; /* margin from the top bar */
+   background-color: #0b0b0b;
+   position: absolute;
+   width: 100%;
+   right: 0px;
+   top: 0px;
+   margin-right: 0px;
+   }
+   @media only screen and (min-width: 768px) {
+   .custom-menuitems {
+   display: flex;
+   align-items: center;
+   }
+   ul.nav li.dropdown:hover &gt; ul.dropdown-menu {
+   display: block;
+   }
+   .nav-row{
+   display:flex; flex-direction: row;
+   }
+   .right-navbar{
+   margin: 0px 17px 0px;
+   }
+   .right-navbar li a{
+   font-size: 12px;
+   padding-bottom: 7px
+   }
+   .nav&gt;li&gt;a:hover, .nav&gt;li&gt;a:focus {
+   outline: none;
+   }
+   .lower-navigation{
+   background: #61616173;
+   border-radius: 25px;
+   margin-left: 30%;
+   }
+   @media only screen and (max-width: 1200px)  {
+   .lower-navigation{
+   margin-left: 0%;
+   }
+   }
+   .lower-navigation li{
+   white-space: nowrap;
+   padding-left: 20px;
+   }
+   .lower-navigation a.active{
+   color: #FFF !important;
+   background-color: #25252582 !important;
+   border-radius: 25px;
+   }
+   .lower-navigation .dropdown-toggle{
+   /*padding-left: 0px !important;
+   padding-right: 5px !important;*/
+   outline: none !important;
+   }
+   .lower-navigation .active .dropdown-toggle{
+   display: none !important;
+   }
+   }
+   @media only screen and (max-width: 768px)  {
+   .lower-navigation a.s-lg-tab-drop.dropdown-toggle{
+   display: block !important;
+   }
+   .lower-navigation .s-lg-tab-top-link.pull-left{
+   z-index:100;
+   }
+   }
+   .nav-logotext{
+   flex-grow: 1;
+   margin-left: 15px;
+   color: #FFF;
+   }
+   @media only screen and (max-width: 1126px)  {
+   .nav-logotext{
+   display: none !important;
+   }
+   .nav-email{
+   display: none !important;
+   }
+   }
+   .nav-email{
+   display: none;
+   white-space: nowrap;
+   padding-right: 5px;
+   }
+   /* HEADER - END */
+   /* FOOTER */
+   .ecu-footer{
+   box-shadow: 0 -5px 5px -5px #333;
+   /* background: #4d4d4d;*/
+   background-image: linear-gradient(35deg,rgba(3,3,3,.49),rgba(3,3,3,.23)),linear-gradient(125deg,rgba(3,3,3,.82),rgba(3,3,3,.12)),url(https://libapps-au.s3-ap-southeast-2.amazonaws.com/customers/3259/images/footer-wood.jpg);
+   background-position: 50%;
+   background-size: cover;
+   color: white;
+   padding: 15px 0px 15px;
+   position: relative;
+   top: 240px;
+   }
+   .ecu-footer a, .ecu-secondfooter a, .ecu-secondfooter p, #s-lib-footer-public span, #s-lib-footer-public a{
+   color: white;
+   }
+   .ecu-secondfooter{
+   color: white;
+   padding: 15px 0px 15px;
+   }
+   .ecu-secondfooter{
+   /*background: #444;*/
+   }
+   #s-lib-footer-public{
+   background: transparent;
+   }
+   .ecu-footer &gt; .container li {
+   font-weight: bold;
+   font-size: 14px;
+   }
+   /* FOOTER - END */
+   /* HOME PAGE BOXES */
+   .essentials-container{
+   position: relative; 
+   height: 250px;
+   color: white;
+   background-size: cover;
+   background-repeat: no-repeat;
+   -webkit-transition: all .5s;
+   -moz-transition: all .5s;
+   -o-transition: all .5s;
+   transition: all .5s;
+   cursor: pointer;
+   }
+   .essentials-container:hover, .essentials-container:focus{
+   -ms-transform: scale(1.2);
+   -moz-transform: scale(1.2);
+   -webkit-transform: scale(1.2);
+   -o-transform: scale(1.2);
+   transform: scale(1.2);
+   }
+   .essentials-text{
+   width: 84%;
+   text-align: center;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   }
+   .essentials-button{
+   display: none;
+   width: 100px;
+   padding: 5px;
+   border: 2px solid #9e9828;
+   border-radius: 15px;
+   color: #9e9828;
+   }
+   .essentials-container:hover .essentials-button, .essentials-container:focus .essentials-button{
+   display: inline-block;
+   }
+   .essentials-container:hover .essentials-paragraph, .essentials-container:focus .essentials-paragraph{
+   display: none;
+   }
+   .essentials-container:before {
+   content: &quot;&quot;;
+   display: visible;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: rgba(52,73,94,0.75);
+   -webkit-transition: all 1s;
+   -moz-transition: all 1s;
+   -o-transition: all 1s;
+   transition: all 1s;
+   }
+   .essentials-container:hover::before{
+   background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.5) 100%);
+   }
+   /* HOME PAGE BOXES - END */
+   /* BOXES WITH MENU */
+   #essentials-menu-wrap {
+   overflow: hidden;
+   }
+   .essentials-menu-container {
+   display: flex;
+   position: relative;
+   justify-content: center;
+   min-height: 160px;
+   color: white;
+   cursor: pointer;
+   background-size: cover;
+   background-repeat: no-repeat;
+   -webkit-transition: all .5s;
+   -moz-transition: all .5s;
+   -o-transition: all .5s;
+   transition: all .5s;
+   }
+   #essentials-menu-wrap:hover .essentials-menu-container,
+   #essentials-menu-wrap:focus .essentials-menu-container {
+   -ms-transform: scale(1.2);
+   -moz-transform: scale(1.2);
+   -webkit-transform: scale(1.2);
+   -o-transform: scale(1.2);
+   transform: scale(1.2);
+   }
+   .essentials-menu-text {
+   width: 80%;
+   padding: 15px 0px 15px;
+   text-align: center;
+   position: relative;
+   }
+   .essentials-menu-links {
+   position: relative;
+   z-index: 100;
+   background: #f8f9fa;
+   }
+   .essentials-menu-links a:hover {
+   background: #ff5100;
+   color: white;
+   }
+   .essentials-menu-links a {
+   border-bottom: 2px #ddd solid;
+   border-top: 0px;
+   border-radius: 0px !important;
+   }
+   .essentials-menu-links .glyphicon{
+   margin-right: 15px;
+   }
+   .essentials-menu-container:before {
+   content: &quot;&quot;;
+   display: visible;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: rgba(52, 73, 94, 0.75);
+   -webkit-transition: all 1s;
+   -moz-transition: all 1s;
+   -o-transition: all 1s;
+   transition: all 1s;
+   }
+   #essentials-menu-wrap:hover .essentials-menu-container::before {
+   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.5) 100%);
+   }
+   /* BOXES WITH MENY - END */
+   /* CONTENT TITLE */
+   h2.s-lib-box-title{
+   /* width: 75%; */
+   background-color: transparent !important;
+   color: black !important;
+   border-bottom: 1px solid #c7c7c7 !important;
+   font-size: 20px !important;
+   }
+   /* CONTENT TITLE - END */
+   /* CONTENT TEXT BOX */
+   .content-box{
+   padding: 20px;
+   border-radius: 8px;
+   overflow: hidden;
+   box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.5);
+   }
+   .content-box &gt; h2:first-of-type{
+   padding: 6px 8px;
+   font-size: 22px !important;
+   border-bottom: 1px solid #c7c7c7 !important;
+   margin: 0px 0px 10px;
+   font-weight: 700;
+   }
+   /* CONTENT TEXT BOX - END */
+   /* CONTENT RIGHT BOX */
+   .rightbox-container {
+   width: auto;
+   min-height: 200px;
+   padding: 20px;
+   cursor: pointer;
+   color: white;
+   text-align: center;
+   border-bottom-left-radius: 12px;
+   border-bottom-right-radius: 12px;
+   /*box-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
+   transition: 1s ease;*/
+   }
+   .rightbox-container p {
+   font-size: 12px;
+   }
+   .rightbox-container .glyphicon {
+   font-size: 30px;
+   }
+   /*.rightbox-container:hover {
+   -webkit-transform: rotateZ(-10deg);
+   -ms-transform: rotateZ(-10deg);
+   transform: rotateZ(-10deg);
+   transition: 1s ease;
+   }*/
+   /* CONTENT RIGHT BOX - END */
+   /* ACCORDION STYLES */
+   .accordions {
+   margin: -15px;
+   border-radius: 15px;
+   overflow: hidden;
+   /* box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.5); */
+   }
+   .accordion {
+   width: 100%;
+   color: #333;
+   overflow: hidden;
+   /*border: 2px black solid;*/
+   }
+   .accordion .glyphicon {
+   margin-left: 10px;
+   font-size: 21px;
+   line-height: 75px;
+   top: 0px;
+   }
+   .accordion-header {
+   display: flex;
+   }
+   .accordion-label {
+   flex-grow: 1;
+   margin-bottom: 0px;
+   padding: 1em;
+   font-size: 20px;
+   font-weight: bold;
+   cursor: pointer;
+   }
+   .accordion-label:hover {
+   /*background: #2c2c2c;*/
+   }
+   .accordion-label::after {
+   content: &quot;\276F&quot;;
+   position: absolute;
+   right: 5px;
+   width: 1em;
+   height: 1em;
+   text-align: center;
+   transition: all 0.35s;
+   }
+   .accordion-content {
+   max-height: 0;
+   padding: 0 1em;
+   color: #333;
+   background: white;
+   transition: all 0.35s;
+   overflow: hidden;
+   }
+   .accordion-checked {
+   /*background: #696969;*/
+   /* color: white;*/
+   border-bottom: 1px solid #efefef;
+   }
+   .accordion-checked .accordion-label {
+   /*border-bottom: 1px #ececec solid;*/
+   }
+   .accordion-checked .accordion-label::after {
+   transform: rotate(90deg);
+   }
+   .accordions input:checked~.accordion-content {
+   max-height: 1000vh;
+   padding: 1em;
+   overflow: visible;
+   }
+   .accordions input {
+   position: absolute;
+   opacity: 0;
+   z-index: -1;
+   }
+   /* ACCORDION STYLES - END */
+   /* COLAPSE, EXPAND BOX */
+   .colapse-wrap{
+   max-width: 130px;
+   float: left;
+   height: 55px;
+   cursor: pointer;
+   }
+   /* START: Number list styled */
+   #s-lg-side-nav-content ol {
+   max-width: 75%;
+   counter-reset: my-awesome-counter;
+   list-style: none;
+   padding-left: 40px;
+   }
+   #s-lg-side-nav-content ol &gt; li {
+   margin: 0 0 0.5rem 0;
+   counter-increment: my-awesome-counter;
+   position: relative;
+   }
+   #s-lg-side-nav-content ol &gt; li::before {
+   content: counter(my-awesome-counter);
+   color: #FFF;
+   font-size: 1.5rem;
+   font-weight: bold;
+   position: absolute;
+   --size: 22px;
+   left: calc(-1 * 22px - 10px); 
+   line-height: 22px;
+   width: 22px;
+   height: 22px;
+   top: 0;
+   /* transform: rotate(-10deg); */
+   background: black;
+   border-radius: 50%;
+   text-align: center;
+   box-shadow: 1px 1px 0 #999;
+   }
+   /* END: Number list styled */
+&lt;/style&gt;
+&lt;script&gt;
+   $( document ).ready(function() {
+   
+   var $copyElements = $(&#39;#s-lg-guide-search-form&#39;).clone();
+   $(&#39;#s-lg-col-0&#39;).prepend($copyElements);
+   
+   // Fix sidebar not created into &#39;#s-lg-side-nav-content .row&#39;
+   var isSidebarOk = $(&#39;#s-lg-side-nav-content &gt; .row &gt; .s-lg-tabs-side&#39;).length;
+   if(isSidebarOk  == 0 ) {
+       $copySidebar = $(&#39;#s-lg-side-nav-content &gt; .s-lg-tabs-side&#39;).clone();
+       $(&#39;#s-lg-side-nav-content &gt; .row&#39;).append( $copySidebar);
+       $(&#39;#s-lg-side-nav-content &gt; .s-lg-tabs-side&#39;).remove();
+   }
+   
+   
+   /* Fix number list count */
+   $(&#39;ol[start]&#39;).each(function() {
+       var val = parseFloat($(this).attr(&quot;start&quot;)) - 1;
+       $(this).css(&#39;counter-increment&#39;,&#39;my-awesome-counter &#39;+ val);
+   });
+   /* END - Fix number list count */
+   
+      // Active item navbar (add Active class to the navigation item which page title matches with the navigation item text)
+      $( &quot;.lower-navigation .navbar-nav &gt; li&quot; ).each(function( index ) {
+         var itemTxt = $( this ).children(&#39;a:first-child&#39;).text().trim();
+         itemTxt = itemTxt.replace(/[^a-z0-9 ]+/gi, &#39; &#39;);
+         itemTxt = itemTxt.replace(/[ ]+/g, &#39; &#39;);
+         if($(&#39;title&#39;).text().indexOf(itemTxt) &gt; 0){
+            $( this ).children(&#39;a:first-child&#39;).addClass(&#39;active&#39;);
+            return;
+         }
+      });
+      
+   
+       // Hide tab menu
+       var addAdminTab =  $(&#39;#s-lg-admin-tab-add&#39;).html();
+       if(typeof addAdminTab === &#39;undefined&#39;){
+   
+            $(&#39;#s-lib-bc-list&#39;).hide();
+   
+   
+            /*$(&#39;#s-lg-tabs-container&#39;).css(&#39;display&#39;, &#39;none&#39;);
+            $(&#39;#s-lg-guide-tabs-title-bar&#39;).hide();*/
+            // if not admin page, close accordions
+            $(&#39;.accordion input&#39;).prop(&#39;checked&#39;, false);
+   
+            // STYLE CONTENT BOX
+            // $(&#39;.s-lib-box:has(.s-lib-box-title)&#39;).addClass(&#39;content-box&#39;);
+   
+           // Hide side menu
+                $(&#39;head&#39;).append(&#39;&lt;style type=&quot;text/css&quot;&gt; #sidebar-wrapper .fa-external-link { display:none; }  .nav.nav-pills.nav-stacked{       display: none;    } @media only screen and (min-width: 768px) {  #s-lg-side-nav-content &gt; .row &gt; .col-md-9 { /*width: 100% !important;*/ } } &lt;/style&gt;&#39;);
+           // main content full width if no columns
+            if( $(&#39;#s-lg-guide-tabs .s-lg-col-boxes &gt; *&#39;).length == 0 ){
+                $(&#39;head&#39;).append(&#39;&lt;style type=&quot;text/css&quot;&gt; @media only screen and (min-width: 768px) {   #s-lg-side-nav-content &gt; .row &gt; .col-md-9 { width: 75% !important; } } &lt;/style&gt;&#39;);
+            }
+   
+      }else{
+          // if Admin Edit page
+   
+          $(&#39;#icon-code&#39;).ready(function() {
+                $(&#39;#icon-code&#39;).parents(&#39;.s-lib-box-container&#39;).show();
+          });
+   
+          $(&#39;head&#39;).append(&#39;&lt;style type=&quot;text/css&quot;&gt; #s-lg-guide-main { top: 0px; } .s-lg-guide-body{ padding-left: 15px; }  .accordion, .accordions {overflow: visible !important; }  .s-lg-content-edit&gt;a { position: relative; top: -5px; }  &lt;/style&gt;&#39;);
+   
+          // Fix accordion edit page - START
+          $(&#39;.accordions&#39;).siblings(&#39;.pull-right&#39;).css(&#39;position&#39;, &#39;absolute&#39;);
+          $(&#39;.accordions&#39;).siblings(&#39;.pull-right&#39;).css(&#39;top&#39;, &#39;135px&#39;);
+          $(&#39;.accordions&#39;).siblings(&#39;.pull-right&#39;).css(&#39;right&#39;, &#39;10px&#39;);
+          // Fix accordion edit page - END
+          
+          $(&#39;body&#39;).css(&#39;background&#39;, &#39;white&#39;);
+          $(&#39;#s-lg-guide-header-info&#39;).css(&#39;color&#39;, &#39;black&#39;);
+   
+         $(&#39;#sidebar-wrapper&#39;).hide();
+         $(&#39;#top-navbar&#39;).hide();
+         $(&#39;.nav-separator&#39;).hide();
+         $(&#39;.top-banner&#39;).css(&#39;height&#39;, &#39;auto&#39;);
+         $(&#39;#s-lg-guide-tabs-title-bar&#39;).css(&#39;margin-top&#39;, &#39;150px&#39;);
+         $(&#39;#light-bulb&#39;).hide();
+         $(&#39;#s-lg-guide-header-info h1&#39;).css(&#39;color&#39;, &#39;black&#39;);
+         $(&#39;.top-banner&#39;).css(&#39;background-color&#39;, &#39;transparent&#39;);
+         $(&#39;.btn-toolbar&#39;).css(&#39;margin-right&#39;, &#39;150px&#39;);
+       }
+   
+            // When click on accordion
+            $( &quot;.accordion-header&quot; ).click(function() {
+                 var checkbox = $(this).siblings( &quot;input:checkbox&quot; );
+                 checkbox.prop(&#39;checked&#39;, !checkbox.prop(&#39;checked&#39;));
+                 if(checkbox.prop(&#39;checked&#39;)){
+                        $(this).addClass(&#39;accordion-checked&#39;);
+                 }else{
+                        $(this).removeClass(&#39;accordion-checked&#39;);
+                  }
+             });
+   
+   // When click sidebar anchor link
+   	$(&quot;.sidebar-nav.nav .list-group-item &gt; a&quot;).click(function () {
+   		setTimeout(function () {
+   			var anchorName = window.location.hash.substr(1);
+   			if (anchorName.length &gt; 0) {
+   				$(document).scrollTop($(&#39;#&#39; + anchorName).offset().top - 140);
+   			}
+   		}, 100);
+   	});
+   
+   
+   // START: Add styles to Content PAGE (2 columns page)
+   var numCol = $(&#39;#s-lg-guide-main .row.s-lg-row:nth-child(2) &gt; div&#39;).length;
+   numCol = 2;
+   if( numCol == 2 || numCol == 3 ){
+   
+         // Fix responsive issues because of Sidebar
+        $(&#39;head&#39;).append(&#39;&lt;style type=&quot;text/css&quot;&gt; @media only screen and (min-width: 768px){ #s-lg-side-nav-content { max-width: 750px; } } @media only screen and (min-width: 992px){ #s-lg-side-nav-content{ max-width: 800px; } } @media only screen and (min-width: 1200px){ #s-lg-side-nav-content { max-width: 1100px; } } @media only screen and (min-width: 1462px){ #s-lg-side-nav-content { max-width: 1170px; } } @media only screen and (max-width: 1285px){ #s-lg-side-nav-content &gt; .row &gt; div:nth-child(1), #s-lg-side-nav-content &gt; .row &gt; div:nth-child(2) { float: none; width: auto; position: relative; } } .ecu-footer &gt; div{ max-width: 1170px; margin-left: auto; margin-right: auto; } .container-custom { margin-left: auto; margin-right: auto; } &lt;/style&gt;&#39;);
+        $(&#39;#s-lg-side-nav-content&#39;).removeClass(&#39;container&#39;).addClass(&#39;container-custom&#39;);
+        $(&#39;.ecu-footer div&#39;).removeClass(&#39;container&#39;);
+   
+       // Remove default CSS style from content boxes
+       $(&#39;head&#39;).append(&#39;&lt;style type=&quot;text/css&quot;&gt; #s-lg-guide-main { background: transparent; padding: 0px; border-radius: 0px; } .s-lib-box { border-radius: 0px; border: 1px solid #dcdcdc; /* box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.5); */ } &lt;/style&gt;&#39;);
+   
+       // Change icon
+       $(&#39;#header-title-icon&#39;).toggleClass(&#39;glyphicon-home glyphicon-book&#39;);
+       
+       // Add style to content title and body
+       $(&#39;head&#39;).append(&#39;&lt;style type=&quot;text/css&quot;&gt;  .s-lib-box.s-lib-box-std &gt; .s-lib-box-title { height: 40px; line-height: 30px; background-color: #383838 !important; color: white !important; } .s-lib-box.s-lib-box-std &gt; div { padding: 15px; } .s-lib-box.s-lib-box-std.s-lib-floating-box{ border-radius: 0px;   } &lt;/style&gt;&#39;);
+   
+       // Add icon before content title
+       $(&#39;#s-lg-col-1 .s-lib-box.s-lib-box-std &gt; .s-lib-box-title&#39;).before(&#39;&lt;img class=&quot;header-icon&quot; src=&quot;&quot; style=&quot;  float: left; margin: 7px 20px 0px 10px; height: 25px;  &quot;/&gt;&#39;);
+   
+   // Add icon before rightbar title
+       $(&#39;#s-lg-col-0 .s-lib-box.s-lib-box-std &gt; .s-lib-box-title&#39;).before(&#39;&lt;img class=&quot;column-icon&quot; src=&quot;&quot; style=&quot; float: left; margin: 7px 20px 0px 10px; height: 25px; &quot;/&gt;&#39;);
+   
+   // Add style and event to colapse all / expand all box
+       $(&#39;.colapse-box&#39;).closest(&#39;.s-lib-box.s-lib-box-std.s-lib-floating-box&#39;).addClass(&#39;colapse-wrap&#39;);
+       $( &#39;.colapse-wrap&#39; ).click(function() {
+           var toggleColapse = $(&#39;.toggle-colapse&#39;);
+           toggleColapse.prop(&#39;checked&#39;, !toggleColapse.is(&#39;:checked&#39;));
+           if( $(&#39;.toggle-colapse&#39;).is(&#39;:checked&#39;) ){
+               $(&#39;.colapse-box .glyphicon&#39;).removeClass(&#39;glyphicon-plus&#39;);
+               $(&#39;.colapse-box .glyphicon&#39;).addClass(&#39;glyphicon-minus&#39;);
+               $(&#39;.colapse-txt&#39;).text(&#39;Collapse all&#39;);
+               $(&#39;.accordion-header&#39;).addClass(&#39;accordion-checked&#39;);
+               $(&#39;.accordion input&#39;).prop(&#39;checked&#39;, true);
+           }else{
+               $(&#39;.colapse-box .glyphicon&#39;).removeClass(&#39;glyphicon-minus&#39;);
+               $(&#39;.colapse-box .glyphicon&#39;).addClass(&#39;glyphicon-plus&#39;);
+               $(&#39;.colapse-txt&#39;).text(&#39;Expand all&#39;);
+               $(&#39;.accordion-header&#39;).removeClass(&#39;accordion-checked&#39;);
+               $(&#39;.accordion input&#39;).prop(&#39;checked&#39;, false);
+           }
+       });
+   
+   // Open accordion based on anchor name
+   setTimeout(function() {
+   var anchorName = window.location.hash.substr(1);
+   if (anchorName.length){
+      var checkbox = $(&#39;#&#39; + anchorName ).parents(&#39;.accordion&#39;).children(&#39;input:checkbox&#39;);
+      var accordionHeader = $(&#39;#&#39; + anchorName ).parents(&#39;.accordion-header&#39;);
+      checkbox.prop(&#39;checked&#39;, true);
+      accordionHeader.addClass(&#39;accordion-checked&#39;);
+      setTimeout(function() { $(document).scrollTop( $(&#39;#&#39; + anchorName).offset().top );  }, 160);
+   }
+   }, 500);
+   
+   /* START: Scroll rightbar
+   if(numCol == 2) {
+      $col1 = $(&quot;#s-lg-col-1&quot;);
+      $sidebar = $(&quot;#s-lg-col-2&quot;);
+      $window = $(window);
+      sidebarOffset = $sidebar.offset();
+      navbar = $(&#39;.navbar &#39;);
+   $window.scroll(function () {
+   console.log(&#39;window scrollTop &#39; + $window.scrollTop() + &#39; sidebarOffsetTop &#39; + sidebarOffset.top);
+   
+       if ($window.scrollTop() &gt; (sidebarOffset.top)) {
+         if( ($col1.height() + $col1.offset().top) &gt; ($window.scrollTop() + $sidebar.height() + navbar.height()) ){
+           $sidebar.stop().animate({
+               marginTop: $window.scrollTop() - sidebarOffset.top + navbar.height() + 10
+           });
+          }
+       } else {
+           $sidebar.stop().animate({
+               marginTop: 0
+           });
+       }
+   });
+   }
+    END: Scroll rightbar */
+   
+   
+   }
+   // END: Add styles to Content PAGE (2 columns page)
+   
+   
+   // Submit search form
+   $(&quot;#search-button&quot;).click(function(){
+           if($(&#39;#search-form input&#39;).val().length &gt; 0)
+              $(&#39;#search-form&#39;).submit();
+   }); 
+   
+   
+   // Side nav collapse
+   $(&quot;#menu-toggle&quot;).click(function(e) {
+           e.preventDefault();
+           $(&quot;.s-lg-guide-body&quot;).toggleClass(&quot;active&quot;);
+       });
+   
+   // START: Open and close sidebar on mobile - #sidebar-toggle
+   $( &quot;#sidebar-toggle&quot; ).click(function() {
+     $(&#39;#sidebar-wrapper&#39;).toggleClass(&#39;sidebar-open&#39;);
+   });
+   // END: Open and close sidebar on mobile
+      
+   // Add icons to side nav
+   $(&#39;.sidebar-nav.nav &gt; li &gt; a:first&#39;).prepend(&#39;&lt;span class=&quot;fa fa-home solo sidebar-icon&quot;&gt;&lt;/span&gt;&#39;);
+   $(&#39;.sidebar-nav.nav &gt; li:not(:first) &gt; a:nth-child(1)&#39;).prepend(&#39;&lt;span class=&quot;fa fa-file solo sidebar-icon&quot;&gt;&lt;/span&gt;&#39;);
+   
+   // Add icons to content Tab List
+   $(&#39;ul[role=&quot;tablist&quot;] a.ui-tabs-anchor&#39;).ready(function(){
+      $(&#39;.s-lib-jqtabs .nav-tabs li a&#39;).prepend(&#39;&lt;span class=&quot;fa fa-file-text-o&quot; style=&quot; left: 15px; position: absolute; &quot;&gt;&lt;/span&gt;&#39;);
+   });
+   
+   
+     
+   });
+&lt;/script&gt;
+&lt;nav id=&quot;top-navbar&quot; class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;
+   &lt;div class=&quot;container custom-menuitems&quot;&gt;
+      &lt;div class=&quot;navbar-header&quot;&gt; &lt;button type=&quot;button&quot; class=&quot;collapsed navbar-toggle&quot; data-toggle=&quot;collapse&quot;
+         data-target=&quot;#bs-top-navbar-collapse-6&quot; aria-expanded=&quot;false&quot;&gt; &lt;span class=&quot;sr-only&quot;&gt;Toggle
+         navigation&lt;/span&gt; &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt; &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt; &lt;span
+            class=&quot;icon-bar&quot;&gt;&lt;/span&gt; &lt;/button&gt; 
+         &lt;button id=&quot;sidebar-toggle&quot; type=&quot;button&quot; class=&quot;collapsed navbar-toggle&quot;&gt; &lt;span class=&quot;sr-only&quot;&gt;Toggle
+         navigation&lt;/span&gt; &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt; &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt; &lt;span
+            class=&quot;icon-bar&quot;&gt;&lt;/span&gt; &lt;/button&gt; 
+         &lt;a href=&quot;https://www.ecu.edu.au/centres/library-services/overview&quot; class=&quot;navbar-brand&quot;&gt;&lt;img
+            src=&quot;https://libapps-au.s3-ap-southeast-2.amazonaws.com/customers/3259/images/logo-small.jpg&quot;
+            class=&quot;ecu-logo&quot;&gt;&lt;/a&gt; 
+      &lt;/div&gt;
+      &lt;div style=&quot;flex-grow: 1&quot; class=&quot;collapse navbar-collapse&quot; id=&quot;bs-top-navbar-collapse-6&quot;&gt;
+         &lt;div class=&quot;nav-row&quot;&gt;
+            &lt;div class=&quot;nav-logotext&quot;&gt;
+               &lt;h2&gt;Research&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;right-navbar&quot;&gt;
+               &lt;ul style=&quot;border-bottom: 2px #dcdcdc solid&quot; class=&quot;nav navbar-nav&quot;&gt;
+                  &lt;li&gt;&lt;a href=&quot;http://ecu.au.libguides.com/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class=&quot;dropdown&quot;&gt;
+                     &lt;a href=&quot;https://ecu.au.libguides.com/?b=p&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot;
+                        aria-expanded=&quot;true&quot;&gt;Subjects &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+                     &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenu1&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/Arts-Humanities&quot;&gt;Arts and Humanities&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/Business-Law&quot;&gt;Business and Law&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/Education-guides&quot;&gt;Education&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/Engineering&quot;&gt;Engineering&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/Health-Medical-Sciences&quot;&gt;Medical and Health Sciences&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/nursing-midwifery&quot;&gt;Nursing and Midwifery&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/Science&quot;&gt;Science&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/WAAPA&quot;&gt;WAAPA&lt;/a&gt;&lt;/li&gt;
+                     &lt;/ul&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/referencing&quot;&gt;Referencing&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/study-essentials/home&quot;&gt;Study Essentials&lt;/a&gt;&lt;/li&gt;
+                  &lt;li class=&quot;dropdown&quot;&gt;
+                     &lt;a href=&quot;https://ecu.au.libguides.com/?b=p&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot;
+                        aria-expanded=&quot;true&quot;&gt;Research Resources &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt; 
+                     &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenu2&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/harc&quot;&gt;A Researcher’s Companion&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/document-delivery&quot;&gt;Document delivery&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/open_access&quot;&gt;Open access&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/research-data-management&quot;&gt;Research data management&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;https://ecu.au.libguides.com/scholarly_communication_theses&quot;&gt;Theses&lt;/a&gt;&lt;/li&gt;
+                     &lt;/ul&gt;
+                  &lt;/li&gt;
+               &lt;/ul&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;div class=&quot;nav-row lower-navigation&quot;&gt;
+            &lt;div style=&quot;flex-grow: 1&quot;&gt;
+               &lt;ul class=&quot;nav navbar-nav full-arrow&quot;&gt;
+                  &lt;!--  --&gt;
+                  &lt;li&gt;
+                     &lt;a title=&quot;&quot;
+                        href=&quot;https://ecu.au.libguides.com/scholarly_communication_navigating_research&quot;
+                        aria-label=&quot;Navigating Research&quot;&gt;
+                     &lt;span&gt;&lt;span class=&quot;glyphicon glyphicon-file&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Navigating Research&lt;/span&gt;
+                     &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                     &lt;a title=&quot;&quot;
+                        href=&quot;https://ecu.au.libguides.com/scholarly_communication_mrd&quot;
+                        aria-label=&quot;Manage Research Data&quot;&gt;
+                     &lt;span&gt;&lt;span class=&quot;glyphicon glyphicon-file&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Manage Research Data&lt;/span&gt;
+                     &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                     &lt;a title=&quot;&quot;
+                        href=&quot;https://ecu.au.libguides.com/publish&quot;
+                        aria-label=&quot;Publish&quot;&gt;
+                     &lt;span&gt;&lt;span class=&quot;glyphicon glyphicon-file&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Publish&lt;/span&gt;
+                     &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                     &lt;a title=&quot;&quot;
+                        href=&quot;https://ecu.au.libguides.com/promote&quot;
+                        aria-label=&quot;Promote&quot;&gt;
+                     &lt;span&gt;&lt;span class=&quot;glyphicon glyphicon-file&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Promote&lt;/span&gt;
+                     &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                     &lt;a title=&quot;&quot;
+                        href=&quot;https://ecu.au.libguides.com/theses&quot;
+                        aria-label=&quot;Theses&quot;&gt;
+                     &lt;span&gt;&lt;span class=&quot;glyphicon glyphicon-file&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Theses&lt;/span&gt;
+                     &lt;/a&gt;
+                  &lt;/li&gt;
+               &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nav-email&quot;&gt;
+               &lt;span style=&quot;font-size: 1.5em; line-height: 46px; text-align: center;&quot;
+                  class=&quot;glyphicon glyphicon-envelope&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+               &lt;span style=&quot;font-size: 1.5em; line-height: 46px; text-align: center;&quot;&gt;Library@ecu.edu.au&lt;/span&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/nav&gt;
+&lt;!-- Sidebar --&gt;
+&lt;div id=&quot;sidebar-wrapper&quot;&gt;
+   &lt;nav id=&quot;spy&quot;&gt;
+      &lt;ul class=&quot;sidebar-nav nav&quot;&gt;
+         
+      &lt;/ul&gt;
+   &lt;/nav&gt;
+&lt;/div&gt;
+&lt;div class=&quot;nav-separator&quot;&gt;&lt;/div&gt;
+&lt;!-- SIDE NAV --&gt;
+&lt;body class=&quot;s-lg-guide-body&quot;&gt;
+   
+   
+   &lt;!-- BEGIN: Page Header --&gt;
+   &lt;!-- END: Page Header --&gt;
+   &lt;!-- BEGIN: Guide Header --&gt;
+   &lt;div class=&quot;top-banner&quot;&gt;
+      &lt;nav id=&quot;s-lib-bc&quot; aria-label=&quot;breadcrumb&quot;&gt;
+         
+      &lt;/nav&gt;
+      &lt;div class=&quot;pull-right&quot;&gt;
+         &lt;div id=&quot;s-lg-guide-header-search&quot;&gt;
+                    
+         &lt;/div&gt;
+         
+      &lt;/div&gt;
+      &lt;div id=&quot;s-lg-guide-header-info&quot;&gt;
+         &lt;div style=&quot;display: flex; flex-direction: row; align-items:center;&quot;&gt;
+            &lt;img id=&quot;light-bulb&quot; src=&quot;https://libapps-au.s3-ap-southeast-2.amazonaws.com/customers/3259/images/light-bulb-separated.jpg&quot; width=&quot;140px&quot; /&gt;
+            &lt;h1 id=&quot;s-lg-guide-name&quot;&gt;: &lt;span class=&quot;page-subtitle&quot;&gt;&lt;/span&gt;&lt;/h1&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;s-lg-guide-desc-container&quot;&gt;
+            &lt;span id=&quot;s-lg-guide-description&quot;&gt;&lt;/span&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;!-- END: Guide Header --&gt;
+   &lt;div id=&quot;s-lg-guide-tabs-title-bar&quot; class=&quot;container s-lib-side-borders&quot;&gt;&lt;/div&gt;
+   &lt;div id=&quot;s-lg-side-nav-content&quot; class=&quot;container s-lib-side-borders pad-top-med&quot;&gt;
+      &lt;div class=&quot;row&quot;&gt;
+         &lt;div class=&quot;col-md-9&quot;&gt;
+            &lt;div class=&quot;s-lg-tab-content&quot;&gt;
+               &lt;div id=&quot;s-lg-guide-main&quot; class=&quot;tab-pane active&quot;&gt;
+                  
+               &lt;/div&gt;
+            &lt;/div&gt;
+            
+         &lt;/div&gt;
+         &lt;div class=&quot;col-md-3 s-lg-tabs-side pad-bottom-med&quot;&gt;
+            &lt;div id=&quot;s-lg-tabs-container&quot;&gt;
+               &lt;div id=&quot;s-lg-guide-tabs&quot; role=&quot;navigation&quot; aria-label=&quot;Guide Page Menu&quot;&gt;
+                  &lt;ul class=&quot;nav nav-pills nav-stacked split-button-nav&quot;&gt;
+                     
+                  &lt;/ul&gt;
+                  
+               &lt;/div&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;!-- BEGIN: Page Footer --&gt;
+   &lt;div class=&quot;row ecu-footer&quot;&gt;
+      &lt;!-- BEGIN: Custom Footer --&gt;
+      
+      &lt;!-- END: Custom Footer --&gt;
+      &lt;div class=&quot;ecu-secondfooter&quot;&gt;
+         &lt;div id=&quot;s-lib-footer-public&quot; class=&quot;s-lib-footer footer container  s-lib-side-borders&quot;&gt;
+            &lt;div id=&quot;s-lg-guide-header-meta&quot; class=&quot;pad-top-sm pad-left-med clearfix&quot;&gt;
+               &lt;ul id=&quot;s-lg-guide-header-attributes&quot; class=&quot;&quot;&gt;
+                  &lt;li id=&quot;s-lg-guide-header-updated&quot; class=&quot;s-lg-h-separator&quot;&gt;
+                      
+                  &lt;/li&gt;
+                  &lt;li id=&quot;s-lg-guide-header-url&quot; class=&quot;s-lg-h-separator&quot;&gt;
+                     
+                  &lt;/li&gt;
+                  &lt;li id=&quot;s-lg-guide-print-url&quot;&gt;
+                     
+                  &lt;/li&gt;
+               &lt;/ul&gt;
+               &lt;div id=&quot;s-lib-footer-login-link&quot; class=&quot;pull-right pad-right-med&quot;&gt;
+                   
+               &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pad-bottom-sm clearfix&quot;&gt;
+               &lt;div id=&quot;s-lib-footer-support-link&quot; class=&quot;pull-right pad-right-med&quot;&gt;
+                   
+               &lt;/div&gt;
+               &lt;div id=&quot;s-lg-guide-header-subjects&quot; class=&quot;pad-top-sm pad-left-med pad-right-med pull-left&quot;&gt;
+                  
+               &lt;/div&gt;
+               &lt;div id=&quot;s-lg-guide-header-tags&quot; class=&quot;pad-top-sm pad-left-med&quot;&gt;
+                  
+               &lt;/div&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;!-- END: Page Footer --&gt;
+         &lt;div id=&quot;s-lib-scroll-top&quot;&gt;
+            &lt;a href=&quot;javascript:void(0);&quot; onclick=&quot;jQuery(&#39;html, body&#39;).animate({scrollTop: 0}, 750);&quot;
+               title=&quot;Back to Top&quot; aria-label=&quot;Back to Top&quot;&gt;
+            &lt;span class=&quot;fa-stack fa-lg&quot;&gt;
+            &lt;i class=&quot;fa fa-square-o fa-stack-2x&quot;&gt;&lt;/i&gt;
+            &lt;i class=&quot;fa fa-angle-double-up fa-stack-1x&quot; style=&quot;position:relative; bottom:2px;&quot;&gt;&lt;/i&gt;
+            &lt;/span&gt;
+            &lt;/a&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;s-lib-alert&quot; title=&quot;&quot;&gt;
+            &lt;div id=&quot;s-lib-alert-content&quot;&gt;&lt;/div&gt;
+         &lt;/div&gt;
+         &lt;div class=&quot;container&quot;&gt;
+            &lt;p class=&quot;text-center&quot;&gt;&lt;i&gt;Edith Cowan University acknowledges and respects the Nyoongar people, who are
+               the traditional custodians of the land upon which its campuses stand and its programs
+               operate.&lt;br&gt;In particular ECU pays its respects to the Elders, past and present, of the Nyoongar
+               people, and embrace their culture, wisdom and knowledge.&lt;/i&gt;
+            &lt;/p&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/body&gt;
+</code>
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<button class="editor-button" onclick="window.open('https://codepen.io/pen/?editors=1100', '_blank');" type="button">Editor</button>
+</pre>
+<script>hljs.highlightAll();</script>
+<script>
+   function copyCode(button) {
+   const codeElement = button.previousElementSibling;
+   const text = codeElement.textContent;
+   
+   navigator.clipboard.writeText(text).then(() => {
+      button.textContent = 'Copied!';
+      button.classList.add('copied');
+      setTimeout(() => {
+         button.textContent = 'Copy';
+         button.classList.remove('copied');
+      }, 2000);
+   }).catch(err => {
+      console.error('Failed to copy: ', err);
+   });
+   }
+</script>
+</body>
+</html>
